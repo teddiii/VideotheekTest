@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Videotheek.ERP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
     <Grid>
         <Ribbon x:Name="MainRibbon" VerticalContentAlignment="Center" SelectedIndex="0">
             <!-- Help pane, right side -->
