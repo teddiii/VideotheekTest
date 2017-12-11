@@ -82,5 +82,10 @@ namespace Videotheek.ERP
                                     , "Delete product category", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 DataSource.Remove(obj);
         }
+
+        private void btnReserve_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

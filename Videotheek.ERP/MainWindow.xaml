@@ -41,16 +41,6 @@
                     <RibbonButton x:Name="btnProductOverview" Label="Product overview" SmallImageSource="Resources/Icons/warehouse.png" ></RibbonButton>
                     <RibbonButton x:Name="btnProductAdd" Label="Add new product" SmallImageSource="Resources/Icons/trolley.png" ></RibbonButton>
                 </RibbonGroup>
-                <!-- Ribbon Group : Product category management -->
-                <RibbonGroup x:Name="grpReservaties" Header="Reservaties">
-                    <RibbonButton x:Name="btnReservationOverview" Label="Reservation overview" SmallImageSource="Resources/Icons/reserved.png"></RibbonButton>
-                    <RibbonButton x:Name="btnReservationAdd" Label="Add new reservation"></RibbonButton>
-                </RibbonGroup>
-                <!-- Ribbon Group: Price type of products management -->
-                <RibbonGroup x:Name="grpPriceByTypes" Header="Unit price types">
-                    <RibbonButton x:Name="btnUnitPriceTypeOverview" Label="Type overview" ></RibbonButton>
-                    <RibbonButton x:Name="btnUnitPriceTypeAdd" Label="Add new type" ></RibbonButton>
-                </RibbonGroup>
             </RibbonTab>
             <RibbonTab Header="Users" KeyTip="U">
                 <!-- Ribbon Group: User management -->

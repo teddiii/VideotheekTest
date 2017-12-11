@@ -19,9 +19,12 @@ namespace Videotheek.ERP
     /// </summary>
     public partial class LoginWindow : Window
     {
+
         public LoginWindow()
         {
             InitializeComponent();
+
+
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
