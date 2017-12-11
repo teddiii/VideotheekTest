@@ -4,16 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Videotheek.ERP"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             mc:Ignorable="d" Height="298.101" Width="406.329">
     <Grid x:Name="grdOverview">
         <DataGrid Name="grdProducts" AutoGenerateColumns="False" CanUserAddRows="False" SelectionMode="Single" RowEditEnding="grdProducts_RowEditEnding">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=Id}" Header="ID" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=Id}" Header="ID" IsReadOnly="True" Visibility="Hidden"/>
                 <DataGridTextColumn Binding="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" Header="Name" />
                 <DataGridTextColumn Binding="{Binding Path=Genre, UpdateSourceTrigger=PropertyChanged}" Header="Genre"/>
-                <DataGridTextColumn Binding="{Binding Path=Year, UpdateSourceTrigger=PropertyChanged}" Header="Year" />
-                <DataGridCheckBoxColumn Binding="{Binding Path=IsReserved, UpdateSourceTrigger=PropertyChanged}" Header="Is reserved" />
+                <DataGridTextColumn Binding="{Binding Path=Year, UpdateSourceTrigger=PropertyChanged}" Header="Year"/>
+                <DataGridTextColumn Binding="{Binding Path=Duration, UpdateSourceTrigger=PropertyChanged}" Header="Duration (minutes)"/>
+                <DataGridCheckBoxColumn Binding="{Binding Path=IsReserved, UpdateSourceTrigger=PropertyChanged}" Header="Is reserved"/>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201712110921391_Products.Designer.cs">
       <DependentUpon>201712110921391_Products.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712111004426_Duration.cs" />
+    <Compile Include="Migrations\201712111004426_Duration.Designer.cs">
+      <DependentUpon>201712111004426_Duration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -85,6 +89,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201712110921391_Products.resx">
       <DependentUpon>201712110921391_Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712111004426_Duration.resx">
+      <DependentUpon>201712111004426_Duration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

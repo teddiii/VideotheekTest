@@ -36,10 +36,16 @@ namespace Videotheek.Entities
         /// Gets/sets the genre of the product
         /// </summary>
         [Column("genre")]
+        [Required(ErrorMessage = "The genre has to be known.")]
         public string Genre { get; set; }
 
         [Column("year")]
+        [Required(ErrorMessage = "The year has to be known.")]
         public int Year { get; set; }
+
+        [Column("Duration (minutes)")]
+        [Required(ErrorMessage = "The duration has to be known.")]
+        public int Duration { get; set; }
 
         /// <summary>
         /// Gets/sets the unit price of the product
