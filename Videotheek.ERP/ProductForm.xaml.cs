@@ -61,8 +61,11 @@ namespace Videotheek.ERP
             try
             {
                 if (BL_Products.Save(Model))
+                {
                     if (OnModelSaved != null)
                         OnModelSaved(Model);
+                }
+                   
             }
             catch (Exception)
             {

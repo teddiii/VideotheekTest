@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Videotheek.ERP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized" Closing="Mainscreen_Closing">
     <Grid>
         <Ribbon x:Name="MainRibbon" VerticalContentAlignment="Center" SelectedIndex="0">
             <!-- Help pane, right side -->
@@ -31,15 +31,15 @@
                 <RibbonApplicationMenu KeyTip="F">
                     <RibbonApplicationMenuItem x:Name="ramiManageCurrentAccount" Header="My account" ImageSource="Resources/Icons/account64.png" />
                     <RibbonApplicationMenuItem Header="Options" ImageSource="Resources/Icons/settings.png" />
-                    <RibbonApplicationMenuItem x:Name="ramiExit" Header="Exit" ImageSource="Resources/Icons/exit.png" />
+                    <RibbonApplicationMenuItem x:Name="ramiExit" Header="Exit" ImageSource="Resources/Icons/exit.png" Click="ramiExit_Click" />
                 </RibbonApplicationMenu>
             </Ribbon.ApplicationMenu>
             <!-- Ribbontab #1: Home-tab -->
             <RibbonTab Header="Home" KeyTip="H">
                 <!-- Ribbon Group: Product management -->
                 <RibbonGroup x:Name="grpProducts" Header="Products">
-                    <RibbonButton x:Name="btnProductOverview" Label="Product overview" SmallImageSource="Resources/Icons/warehouse.png" ></RibbonButton>
-                    <RibbonButton x:Name="btnProductAdd" Label="Add new product" SmallImageSource="Resources/Icons/trolley.png" ></RibbonButton>
+                    <RibbonButton x:Name="btnProductOverview" Label="Product overview" SmallImageSource="Resources/Icons/warehouse.png" Click="btnProductOverview_Click" ></RibbonButton>
+                    <RibbonButton x:Name="btnProductAdd" Label="Add new product" SmallImageSource="Resources/Icons/trolley.png" Click="btnProductAdd_Click" ></RibbonButton>
                 </RibbonGroup>
             </RibbonTab>
             <RibbonTab Header="Users" KeyTip="U">

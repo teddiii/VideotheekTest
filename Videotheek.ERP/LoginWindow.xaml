@@ -11,20 +11,20 @@
         <TextBlock x:Name="lblTitle" Margin="274,22,0,0" TextWrapping="Wrap" Text="Welcome to the Videotheek Library" VerticalAlignment="Top" TextAlignment="Center" FontSize="22" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Left" Width="393"/>
         <Label x:Name="lblUsernameTitle" Content="Username" HorizontalAlignment="Left" Margin="288,53,0,0" VerticalAlignment="Top" FontFamily="Arial"/>
         <Label x:Name="lblPasswordTitle" Content="Password" HorizontalAlignment="Left" Margin="289,105,0,0" VerticalAlignment="Top" FontFamily="Arial"/>
-        <TextBox x:Name="txtUsername" Height="23" Margin="291,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="250"/>
-        <PasswordBox x:Name="txtPassword" Margin="291,125,0,0" VerticalAlignment="Top" Height="23" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="215"/>
-        <Button x:Name="btnLogin" Content="Login" VerticalAlignment="Top" Margin="569,101,0,0" HorizontalAlignment="Left" Width="90"/>
+        <TextBox x:Name="txtUsername" Height="23" Margin="291,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="250" KeyUp="txtUsername_KeyUp"/>
+        <PasswordBox x:Name="txtPassword" Margin="291,125,0,0" VerticalAlignment="Top" Height="23" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="215" KeyUp="txtPassword_KeyUp" PasswordChanged="txtPassword_PasswordChanged"/>
+        <Button x:Name="btnLogin" Content="Login" VerticalAlignment="Top" Margin="569,101,0,0" HorizontalAlignment="Left" Width="90" Click="btnLogin_Click"/>
         <Button x:Name="btnCancel" Content="Cancel" Margin="569,127,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" Click="btnCancel_Click"/>
         <Label x:Name="lblUsernameError" Content="" HorizontalAlignment="Left" Margin="357,52,0,0" VerticalAlignment="Top" Foreground="Red"/>
         <Label x:Name="lblPasswordError" Content="" HorizontalAlignment="Left" Margin="357,104,0,0" VerticalAlignment="Top" Foreground="Red"/>
         <Label x:Name="lblAuthError" Content="" HorizontalAlignment="Left" Margin="291,40,0,0" VerticalAlignment="Top" Foreground="Red"/>
-        <Button x:Name="btnShowPwd" HorizontalAlignment="Left" Margin="511,125,0,0" VerticalAlignment="Top" Width="30" Height="22">
+        <Button x:Name="btnShowPwd" HorizontalAlignment="Left" Margin="511,125,0,0" VerticalAlignment="Top" Width="30" Height="22" Click="btnShowPwd_Click">
             <Image Source="Resources/Icons/eyeopen24.png"></Image>
         </Button>
-        <Button x:Name="btnHidePwd" HorizontalAlignment="Left" Margin="511,125,0,0" VerticalAlignment="Top" Width="30" Height="22">
+        <Button x:Name="btnHidePwd" HorizontalAlignment="Left" Margin="511,125,0,0" VerticalAlignment="Top" Width="30" Height="22" Click="btnHidePwd_Click">
             <Image Source="Resources/Icons/eyeclosed24.png"></Image>
         </Button>
-        <TextBox x:Name="txtPasswordPlain" Height="23" Margin="291,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="215"/>
+        <TextBox x:Name="txtPasswordPlain" Height="23" Margin="291,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="215" KeyUp="txtPasswordPlain_KeyUp" TextChanged="txtPasswordPlain_TextChanged"/>
 
     </Grid>
 </Window>
