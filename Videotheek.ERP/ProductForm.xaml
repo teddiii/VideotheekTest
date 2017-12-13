@@ -18,7 +18,7 @@
         <TextBox x:Name="txtDuration" Height="30" Margin="18,351,248,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center" Text="{Binding Path=Model.Duration}"/>
         <Label x:Name="lblUnitprice" Content="Unit Price
                " HorizontalAlignment="Left" Margin="18,411,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="txtUnitprice" Height="30" Margin="18,442,248,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center" Text="{Binding Path=Model.UnitPrice}"/>
+        <TextBox x:Name="txtUnitprice" Height="30" Margin="18,442,248,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center" Text="{Binding Path=Model.UnitPrice}" KeyUp="txtUnitprice_KeyUp"/>
         <CheckBox x:Name="cbxIsReserved" Content="Is Reserved?" HorizontalAlignment="Left" Margin="206,361,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center"
                   IsChecked="{Binding Path=Model.IsReserved}" />
 

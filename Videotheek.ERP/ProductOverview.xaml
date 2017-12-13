@@ -13,7 +13,7 @@
                 <DataGridTextColumn Binding="{Binding Path=Genre, UpdateSourceTrigger=PropertyChanged}" Header="Genre"/>
                 <DataGridTextColumn Binding="{Binding Path=Year, UpdateSourceTrigger=PropertyChanged}" Header="Year"/>
                 <DataGridTextColumn Binding="{Binding Path=Duration, UpdateSourceTrigger=PropertyChanged}" Header="Duration (minutes)"/>
-                <DataGridTextColumn Binding="{Binding Path=UnitPrice, UpdateSourceTrigger=PropertyChanged}" Header="Unit price EUR"/>
+                <DataGridTextColumn Binding="{Binding Path=UnitPrice, UpdateSourceTrigger=PropertyChanged, StringFormat=C2, ConverterCulture=nl-BE}" Header="Unit price EUR"/>
                 <DataGridCheckBoxColumn Binding="{Binding Path=IsReserved, UpdateSourceTrigger=PropertyChanged}" Header="Is reserved"/>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>

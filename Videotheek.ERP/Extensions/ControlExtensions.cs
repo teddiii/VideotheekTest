@@ -16,6 +16,10 @@ namespace Videotheek.ERP.Extensions
             int length = 0;
             passwordBox.SetSelection(start, length);
         }
+        public static void SetCursorOnEnd(this TextBox textBox)
+        {
+            textBox.CaretIndex = textBox.Text.Length;
+        }
 
         public static void SetSelection(this PasswordBox passwordBox, int start, int length)
         {
