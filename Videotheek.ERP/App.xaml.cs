@@ -14,5 +14,6 @@ namespace Videotheek.ERP
     /// </summary>
     public partial class App : Application
     {
+        AppDbContext ctx = AppDbContext.Instance(ConfigurationManager.ConnectionStrings["AppDbCS"].ConnectionString);
     }
 }

@@ -39,10 +39,16 @@ namespace Videotheek.Entities
         [Required(ErrorMessage = "The genre has to be known.")]
         public string Genre { get; set; }
 
+        /// <summary>
+        /// Gets/sets the year when the product was made
+        /// </summary>
         [Column("year")]
         [Required(ErrorMessage = "The year has to be known.")]
         public int Year { get; set; }
 
+        /// <summary>
+        /// Gets/sets the duration of the product
+        /// </summary>
         [Column("Duration (minutes)")]
         [Required(ErrorMessage = "The duration has to be known.")]
         public int Duration { get; set; }
@@ -54,7 +60,7 @@ namespace Videotheek.Entities
         [Required(ErrorMessage = "Price is required")]
         [Range(0.00, 999999999, ErrorMessage = "Price must be greater than 0,00")]
         [DisplayName("Unit price (€)")]
-        [DisplayFormat(DataFormatString = "{0:0,0}")]
+        [DisplayFormat(DataFormatString = "{0:0,00}")]
         public decimal UnitPrice { get; set; }
         
         /// <summary>

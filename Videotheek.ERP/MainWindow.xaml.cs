@@ -94,13 +94,21 @@ namespace Videotheek.ERP
             {
                 SetTitleByRibbonButton(sender);
 
-                mainContent.Content = new ProductForm();
+                var _form = new ProductForm();
+                _form.OnModelSaved += ProductOnModelSaved;
+
+                mainContent.Content = _form;
             }
             catch (Exception)
             {
 
                 throw;
             }
+        }
+
+        private void ProductOnModelSaved(Entities.Product model)
+        {
+            btnProductOverview_Click(btnProductOverview, null);
         }
     }
 }

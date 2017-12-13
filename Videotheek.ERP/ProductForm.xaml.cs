@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Videotheek.BL;
 using Videotheek.Entities;
+using System.Xaml;
 
 namespace Videotheek.ERP
 {
@@ -63,13 +64,16 @@ namespace Videotheek.ERP
                 if (BL_Products.Save(Model))
                 {
                     if (OnModelSaved != null)
+                    {
                         OnModelSaved(Model);
+                    }
+                        
                 }
                    
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
                 throw;
             }
         }
