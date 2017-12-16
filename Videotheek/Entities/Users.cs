@@ -26,9 +26,7 @@ namespace Videotheek.Entities
         /// <summary>
         /// the id of the user
         /// </summary>
-        [Key]
         [Column("user_id")]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public override Guid Id { get; set; }
 
         /// <summary>
