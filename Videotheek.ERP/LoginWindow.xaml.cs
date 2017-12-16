@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Videotheek.BL;
 using Videotheek.ERP.Extensions;
+using Videotheek.Models;
+using Videotheek.Utilities;
 
 namespace Videotheek.ERP
 {
@@ -72,55 +74,49 @@ namespace Videotheek.ERP
 
         private void Authenticate()
         {
-            string _username = txtUsername.Text.ToLower();
-            string _pass = txtPassword.Password;
-
             bool Validation = false;
 
             lblUsernameError.Content = "";
             lblPasswordError.Content = "";
 
-            if (_username == "admin" && _pass == "admin")
+            try
             {
-                Validation = true;
-            }
+                if (string.IsNullOrWhiteSpace(txtUsername.Text))
+                {
+                    Validation = false;
+                    lblUsernameError.Content = "is mandatory.";
+                }
 
-            if (Validation == true)
+                if (string.IsNullOrWhiteSpace(txtPassword.Password))
+                {
+                    Validation = false;
+                    lblPasswordError.Content = "is mandatory.";
+                }
+
+                if (Validation && BL_Users.Authenticate(new Loginmodel() { CredentialName = txtUsername.Text, Password = txtPassword.Password }))
+                {
+                    new MainWindow().Show();
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception("Authentication failed. Please check your credentials");
+                }
+            }
+            catch (UserNotFoundException ex)
             {
-                new MainWindow().Show();
-                this.Close();
+                lblUsernameError.Content = ex.Message;
             }
-
-            switch (_username)
+            catch (Exception ex)
             {
-                case null: lblUsernameError.Content = "The username is required to login.";
-                    break;
-                case "": lblUsernameError.Content = "The username is required to login.";
-                    break;
+                lblAuthError.Content = ex.Message;
             }
+            ShowPassword = false;
+            TogglePassword();
 
-            switch (_pass)
-            {
-                case null: lblPasswordError.Content = "The password is required to login.";
-                    break;
-                case "": lblPasswordError.Content = "The password is required to login.";
-                    break;
-            }
-
-            if (_username != "admin" && !string.IsNullOrWhiteSpace(_username))
-            {
-                lblUsernameError.Content = "The username is invalid.";
-                
-            }
-
-            if (_pass != "admin" && !string.IsNullOrWhiteSpace(_pass))
-            {
-                lblPasswordError.Content = "the password you gave is invalid.";
-                
-            }
+            txtUsername.Focus();
 
 
-                
         }
 
         private void btnHidePwd_Click(object sender, RoutedEventArgs e)

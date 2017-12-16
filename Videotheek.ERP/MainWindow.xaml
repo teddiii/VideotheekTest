@@ -29,7 +29,7 @@
             </Ribbon.QuickAccessToolBar>
             <Ribbon.ApplicationMenu>
                 <RibbonApplicationMenu KeyTip="F">
-                    <RibbonApplicationMenuItem x:Name="ramiManageCurrentAccount" Header="My account" ImageSource="Resources/Icons/account64.png" />
+                    <RibbonApplicationMenuItem x:Name="ramiManageCurrentAccount" Header="My account" ImageSource="Resources/Icons/account64.png" Click="ramiManageCurrentAccount_Click" />
                     <RibbonApplicationMenuItem Header="Options" ImageSource="Resources/Icons/settings.png" />
                     <RibbonApplicationMenuItem x:Name="ramiExit" Header="Exit" ImageSource="Resources/Icons/exit.png" Click="ramiExit_Click" />
                 </RibbonApplicationMenu>
@@ -45,8 +45,8 @@
             <RibbonTab Header="Users" KeyTip="U">
                 <!-- Ribbon Group: User management -->
                 <RibbonGroup x:Name="grpUserMngmnt" Header="User management">
-                    <RibbonButton x:Name="btnUserOverview" Label="User overview" SmallImageSource="Resources/Icons/mutipleUsers24.png"></RibbonButton>
-                    <RibbonButton x:Name="btnUserAdd" Label="Add new user" SmallImageSource="Resources/Icons/add-user24.png"></RibbonButton>
+                    <RibbonButton x:Name="btnUserOverview" Label="User overview" SmallImageSource="Resources/Icons/mutipleUsers24.png" Click="btnUserOverview_Click"></RibbonButton>
+                    <RibbonButton x:Name="btnUserAdd" Label="Add new user" SmallImageSource="Resources/Icons/add-user24.png" Click="btnUserAdd_Click"></RibbonButton>
                 </RibbonGroup>
             </RibbonTab>
         </Ribbon>
