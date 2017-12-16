@@ -62,10 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\BL_Products.cs" />
+    <Compile Include="BL\BL_Users.cs" />
     <Compile Include="DAL\DAL_Products.cs" />
+    <Compile Include="DAL\DAL_Users.cs" />
     <Compile Include="Data\AppDbContext.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Users.cs" />
     <Compile Include="Migrations\201712110921391_Products.cs" />
     <Compile Include="Migrations\201712110921391_Products.Designer.cs">
       <DependentUpon>201712110921391_Products.cs</DependentUpon>
@@ -74,7 +77,12 @@
     <Compile Include="Migrations\201712111004426_Duration.Designer.cs">
       <DependentUpon>201712111004426_Duration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712161425514_Users.cs" />
+    <Compile Include="Migrations\201712161425514_Users.Designer.cs">
+      <DependentUpon>201712161425514_Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Loginmodel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,11 +96,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilities\CustomExceptions.cs" />
+    <Compile Include="Utilities\SecurityExtensions.cs" />
+    <Compile Include="Utilities\StringExtensions.cs" />
     <EmbeddedResource Include="Migrations\201712110921391_Products.resx">
       <DependentUpon>201712110921391_Products.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712111004426_Duration.resx">
       <DependentUpon>201712111004426_Duration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712161425514_Users.resx">
+      <DependentUpon>201712161425514_Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

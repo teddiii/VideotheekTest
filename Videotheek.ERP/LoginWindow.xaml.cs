@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Videotheek.BL;
 using Videotheek.ERP.Extensions;
 
 namespace Videotheek.ERP
@@ -31,6 +32,25 @@ namespace Videotheek.ERP
 
             txtUsername.Focus();
 
+            if (BL_Users.Any())
+                txtUsername.Focus();
+            else
+            {
+                var _initUserWindow = new Initialuserwindow();
+                _initUserWindow.OnUserCreated += InitialUserWindow_OnUserCreated;
+
+                _initUserWindow.Show();
+            }
+
+        }
+
+        private void InitialUserWindow_OnUserCreated(string username, string pwd)
+        {
+            txtUsername.Text = username;
+            txtPassword.Password = pwd;
+
+            txtPassword.Focus();
+            txtPassword.SetCursorOnEnd();
         }
 
         private void TogglePassword()

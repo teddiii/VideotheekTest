@@ -25,6 +25,15 @@ namespace Videotheek.Data
         /// Gets/sets the DB Set for the products
         /// </summary>
         public DbSet<Product> Products { get; set; }
+        /// <summary>
+        /// Gets/sets the db set for the users
+        /// </summary>
+        public DbSet<Users> Users { get; set; }
+        /// <summary>
+        /// The Id of the current logged in user
+        /// '?' indicated that it can be nullable
+        /// </summary>
+        public Guid? CurrentUserId { get; internal set; }
 
         #endregion
 
