@@ -81,6 +81,14 @@
     <Compile Include="Migrations\201712161425514_Users.Designer.cs">
       <DependentUpon>201712161425514_Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712161742071_check.cs" />
+    <Compile Include="Migrations\201712161742071_check.Designer.cs">
+      <DependentUpon>201712161742071_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712161921293_key.cs" />
+    <Compile Include="Migrations\201712161921293_key.Designer.cs">
+      <DependentUpon>201712161921293_key.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Loginmodel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -107,6 +115,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712161425514_Users.resx">
       <DependentUpon>201712161425514_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712161742071_check.resx">
+      <DependentUpon>201712161742071_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712161921293_key.resx">
+      <DependentUpon>201712161921293_key.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

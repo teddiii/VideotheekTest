@@ -85,18 +85,5 @@ namespace Videotheek.ERP
             if (OnUpdateUser != null)
                 OnUpdateUser(obj);
         }
-
-        private void btnChangepwd_Click(object sender, RoutedEventArgs e)
-        {
-            var obj = ((FrameworkElement)sender).DataContext as Users;
-
-            string newPwd = StringExtensions.GetRandomString();
-
-            BL_Users.Update(obj, newPwd);
-
-            MessageBox.Show("The new password has been sent to the user.", "New password");
-
-            BindData();
-        }
     }
 }

@@ -222,6 +222,8 @@ namespace Videotheek.ERP
                 user = BL_Users.ChangePassword(user, pwd);
                 BL_Users.Create(user);
 
+         
+
                 btnUserOverview_Click(btnUserOverview, null);
             }
             catch (Exception ex)

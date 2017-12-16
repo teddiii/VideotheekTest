@@ -74,7 +74,7 @@ namespace Videotheek.ERP
 
         private void Authenticate()
         {
-            bool Validation = false;
+            bool Validation = true;
 
             lblUsernameError.Content = "";
             lblPasswordError.Content = "";

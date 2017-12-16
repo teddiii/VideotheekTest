@@ -56,7 +56,8 @@ namespace Videotheek.ERP
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            Confirming?.Invoke(Model, txtPassword.Password);
+            if (Confirming != null)
+                Confirming(Model, txtPassword.Password);
 
             try
             {
